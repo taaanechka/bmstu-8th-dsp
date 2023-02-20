@@ -1,4 +1,5 @@
-% ЛР1: Изучение дискретизации сигналов
+% ЛР1: Изучение дискретизации сигналов.
+% Прямоугольный импульс и сигнал Гаусса
 function main
     n = input('Введите количество точек: ');
     step = input('Введите шаг: ');
@@ -11,7 +12,7 @@ function main
     initialYRectArr = computeRectPulse(x0Arr);
     initialYGaussArr = computeGaussSignal(x0Arr);
 
-    % Дискретизация
+    % Дискретизация сигнала
     discreteYRectArr = computeRectPulse(xArr);
     discreteYGaussArr = computeGaussSignal(xArr);
 
