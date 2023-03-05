@@ -57,7 +57,7 @@ end
 
 
 function xArr = dft(x)
-    N = length(x)
+    N = length(x);
     xArr = 0:N - 1;
     temp = -2 * pi * sqrt(-1) * xArr / N;
     for i = 1:length(xArr)
@@ -76,7 +76,7 @@ end
 
 function draw(ind, xNum, y, yImproved, f, nameAlg, namePulse)
     subplot(2, 2, ind);
-    N = length(xNum)
+    N = length(xNum);
     plot(xNum, f(y) / N, xNum, f(yImproved) / N);
     title([nameAlg, ' ', namePulse]);
     legend('С эффектом близнецов', 'Без эффекта близнецов');
