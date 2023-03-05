@@ -76,7 +76,8 @@ end
 
 function draw(ind, xNum, y, yImproved, f, nameAlg, namePulse)
     subplot(2, 2, ind);
-    plot(xNum, f(y) / length(xNum), xNum, f(yImproved) / length(xNum));
+    N = length(xNum)
+    plot(xNum, f(y) / N, xNum, f(yImproved) / N);
     title([nameAlg, ' ', namePulse]);
     legend('С эффектом близнецов', 'Без эффекта близнецов');
 end
