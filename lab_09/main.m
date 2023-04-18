@@ -7,8 +7,6 @@ var_noise = 0.0006;
 estimated_nsr = var_noise / (var(I(:)) - var_noise);
 
 PSF = fspecial('motion', 35, 205);
-%PSF = fspecial('motion', 15, 205);
-%J1 = deconvwnr(I, PSF);
 J1 = deconvwnr(I, PSF, estimated_nsr);    % Восстановленное
 
 figure;
